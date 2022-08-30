@@ -8,7 +8,7 @@ import BoardPresenter from './presenter/board-presenter.js';
 
 import {render} from './render.js';
 
-
+const siteBodyElement = document.querySelector('body');
 const siteHeaderElement = document.querySelector('header');
 const filterHeaderElement = siteHeaderElement.querySelector('h2');
 
@@ -31,6 +31,6 @@ render(new FormAddView(), listFormElement);
 render(new FormEditView(), listFormElement);
 render(new RoutePointView(), ulMainElement);
 
-boardPresenter.init(siteMainElement);
+boardPresenter.init(siteBodyElement);
 
 
